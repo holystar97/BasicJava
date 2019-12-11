@@ -38,8 +38,41 @@ public class Test05_Quiz {
 			System.out.println(i+""+op+""+j+"="+res1);
 		}
 		
+		//문3) 주민번호를 이용해서 나이와 성별을 출력하시오
+		// 나이 : 올해년도-태어난년도
+		// -> 성별코드가 1또는 2 이면 1900년 태생 
+		//->  성별코드가 3또는 4이면 2000년 태생
+		// 성별 : 1또는 3 -> 남자 
+		//     2또는 4 -> 여자 
 		
 		
+		int myYear=15; //태어난 연도
+		int code=4; // 성별 코드
+		
+		//태어난 연도 완성하기 
+		switch(code) {
+		
+		case 1:
+		case 2: myYear=1900+myYear; break;
+		case 3:
+		case 4: myYear=2000+myYear; break;
+		
+		}
+		
+		//나이 
+		int myAge=2019-myYear;
+		System.out.println("나이 :" +myAge);
+		
+		//성별 
+		String gender="";
+		switch(code) {
+		case 1: gender="남자"; break;
+		case 2: gender="여자"; break;
+		case 3: gender="남자"; break;
+		case 4: gender="여자"; break;
+		}
+		
+		System.out.println("성별 : "+ gender);
 		
 		
 		
