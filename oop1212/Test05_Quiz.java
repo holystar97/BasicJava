@@ -99,6 +99,27 @@ public class Test05_Quiz {
 	  */
 
 
+	  int even=0;
+	  int odd=0;
+	  boolean flag=false;
+	  for(int a=1; a<=100;a++) {
+		  if(flag) {
+			  even=even+a;
+			  flag=false;
+		  }
+		  else {
+			  odd=odd+a;
+			  flag=true;
+		  }
+		  
+	  }
+	  
+	  System.out.println(even);
+	  System.out.println(odd);
+	  
+	  
+	  
+	  
 
     //문6) 다음식의 결과를 구하시오
     //     1-2+3-4 ... +99-100 = ?
@@ -169,6 +190,12 @@ public class Test05_Quiz {
       -> (1/2) - (2/3) + (3/4) ...
     */
 
+	  
+	  
+	  
+	  
+	  
+	  
 
     
 
@@ -197,7 +224,21 @@ public class Test05_Quiz {
     //    3부터 어디까지 더해야 하는지 구하시오
     //    출력결과) 3+6+9+12+...=
 
+	  /*
+	  int num=3;
 
+	  while(true) {
+		  
+		  if()
+		  
+		  
+	  }
+	  
+	  */
+	  
+	  
+	  
+	  
 
 
     //문11)누적의 합
@@ -299,10 +340,13 @@ public class Test05_Quiz {
        2   5   5    44
     */    
     
+	/*
 	  int g2=5;
 	  int g3=5;
 	  int g5=5;
-	 
+	 */
+	  
+	  
 	  
 	  
 	  
