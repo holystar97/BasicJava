@@ -1,5 +1,7 @@
 package oop1212;
 
+import java.util.Scanner;
+
 public class Test05_Quiz {
   public static void main(String[] args) {
     // 연습문제
@@ -9,51 +11,47 @@ public class Test05_Quiz {
            2000m까지는 기본요금 900원이고
            2000m초과 운행시 200m단위마다
                      기본요금에 100원씩 가산하여 요금을 계산한다
+    System.out.println("### Quiz 1 ####");
+    int totalFee = 900;
+    
+    System.out.print("Enter the distance : ");
+    Scanner stdIn = new Scanner(System.in);
+    int distance = stdIn.nextInt();
+    
+    totalFee = totalFee + ((distance - 2000) / 200 ) * 100;
+    
+    System.out.println("Your Total fee : " + totalFee);                     
     */
 
-	  /*
-    int n=2500;
-    int cost=900;
-    int cnt=0;
-    if(n>2000) {
-    	 while(n-2000>100) {
-    		 n-=200;
-    		 cnt++;	 
-    	 }	
-    }
-	cost+=cnt*100;
-	 
-	 System.out.println(cost);
-	  */
-	  
-	  
-
+	 /*
     //문2) 1~100중에서  2의 배수이면서 3의 배수의 갯수를 구하시오
-    /*
-	 int cnt=0;
-	for(int i=1; i<=100; i++) {	
-		if(i%2==0 && i%3==0) {
-			cnt++;
-		}
-	}
-	System.out.println(cnt);
-	 */
-	 
-	 
-
-    //문3) 소문자 중에서 모음의 갯수를 구하시오  -> 모음 'a','e','i','o','u'
-
-	  /*
-	int cnt=0;
-	for(int i='a'; i<'z';i++) {
-		if(i=='a' || i=='e' || i=='i'|| i=='o' || i=='u') {
-			cnt++;
-		}
-	}
-	System.out.println(cnt);
-*/
+	  
+	 System.out.println("### Quiz 2 ####");
+	 int count = 0;
+	 for (int num = 6; num <= 100; num+=6) {
+		 count++;
+	 }
+	 System.out.println("Total count : " + count);
+    */
 	
 
+    //문3) 소문자 중에서 모음의 갯수를 구하시오  -> 모음 'a','e','i','o','u'
+	/*
+	  System.out.println("### Quiz 3 ####");
+	  int count = 0;
+	  
+	  for (char alpha = 'a'; alpha <= 'z'; alpha++) {
+		  switch (alpha) {
+		  default: break;
+		  case 'a': count++; break;
+		  case 'e': count++; break;
+		  case 'i': count++; break;
+		  case 'o': count++; break;
+		  case 'u': count++; break;
+		  }
+	  }
+	  System.out.println("Total : " + count);
+	*/
 
     //문4) 알파벳을 한줄에 5개씩 출력하시오
     /*
@@ -64,121 +62,73 @@ public class Test05_Quiz {
         UVWXY
         Z
     */
-
-	  /*
-	int cnt=0;
-	for(int i='A'; i<='Z'; i++) {
-		cnt++;
-		System.out.print((char)i);
-		if(cnt %5==0) {
-			System.out.println();
-		}
-	}
-	   */
-    
-    //문5) 1~100중에서  짝수의 합, 홀수의 합을 각각 구하시오
-
-	  /*
-	  int esum=0;
-	  int osum=0;
-	  
-	  for(int i=1; i<=100;i++) {
-		  
-		  if(i%2==0) {
-			  esum+=i;
+	/*
+	  System.out.println("### Quiz 4 ####");
+	  int i = 0;
+	  for (char alpha = 'A'; alpha <= 'Z'; alpha++) {
+		  System.out.print(alpha);
+		  i++;
+		  if (i == 5) {
+			  System.out.println(); 
+			  i = 0;
 		  }
-		  
-		  else if(i%2==1) {
-			  osum+=i;
-		  }
-		  
 	  }
 	  
-	  System.out.println("짝수의 합: "+ esum);
-	  System.out.println("홀수의 합: "+ osum);
 	  */
+	  
+    //문5) 1~100중에서  짝수의 합, 홀수의 합을 각각 구하시오
+	  
+	  System.out.println("### Quiz 5 ####");
+	  int num = 3;
+	  int oddTotal = 1;
+	  int evenTotal = 2;
 
-
-	  int even=0;
-	  int odd=0;
-	  boolean flag=false;
-	  for(int a=1; a<=100;a++) {
-		  if(flag) {
-			  even=even+a;
-			  flag=false;
-		  }
-		  else {
-			  odd=odd+a;
-			  flag=true;
-		  }
-		  
-	  }
+	  while(num <= 100) {
+		  if (num %2 == 1) oddTotal += num;
+		  else evenTotal += num;
+		  num++;
+	  } 
 	  
-	  System.out.println(even);
-	  System.out.println(odd);
-	  
-	  
-	  
-	  
+	  System.out.println("total of odd number : " + oddTotal);
+	  System.out.println("total of even number : " + evenTotal);
 
     //문6) 다음식의 결과를 구하시오
     //     1-2+3-4 ... +99-100 = ?
-
-/*
-	  int osum=0;
-	  int esum=0;
-	  int total=0;
-	  for(int i=1; i<=100; i++) {
-		  
-		  if(i%2==0) {
-			  osum+=i;
-		  }
-		  
-		  else {
-			  esum+=i;
-		  }
-		  
-	  }
-	 total= esum-osum;
-	 System.out.println(total);
-	  
+	  /*
+	  System.out.println("### Quiz 6 ####");
+	  int num = 3;
+	  int oddTotal = 1;
+	  int evenTotal = 2;
+	  while(num <= 100) {
+		  if (num %2 == 1) oddTotal += num;
+		  else evenTotal += num;
+		  num++;
+	  } 
+	  System.out.println("total of odd number : " + oddTotal);
+	  System.out.println("total of even number : " + (-1 * evenTotal));
 	  */
-	  
-	  
 
     //문7) 두수사이의 합을 구하시오
     //     2+3+4+5=14
     //     5+4+3+2=14
 	  /*
-	 int n=2;
-	 int m=5;
-	 int s=0;
-	 int e=0;
-	 
-	 int sum=0;
-	  if(n<m) {
-		  s=n;
-		  e=m;
+	  int start = 2, end = 2;
+	  int total = 0;
+	  
+	  System.out.println("### Quiz 7 ####");
+	  if (start < end) {
+		  for (int i = start; i <= end; i++)
+			  total += i;
 	  }
-	  else if (n>m) {
-		  s=m;
-		  e=n;
+	  else if (start > end) {
+		  for (int i = start; i >= end; i--)
+			  total += i;
 	  }
-	  System.out.print(s);
-	  sum+=s;
-	  for(int i=s+1;i<=e;i++) {
-		  sum+=i;
-		  System.out.print("+"+i);	  
+	  else { // ex) start = 2. end = 2일 때 total은 2일 경우
+		  total = start;
 	  }
-	System.out.print("=");
-	System.out.print(sum);
+	  System.out.println("Total : " + total);
 	  */
-	  
-	  
-	  
-	  
-	  
-	  
 
 
     //문8)다음식의 결과를 구하시오
@@ -189,14 +139,18 @@ public class Test05_Quiz {
       
       -> (1/2) - (2/3) + (3/4) ...
     */
-
+	  /*
+	  System.out.println("### Quiz 8 ####");
 	  
+	  double total = 0.0;
+	  double oper = 1;
 	  
-	  
-	  
-	  
-	  
-
+	  for (int i = 1; i < 100; i++) {
+		  total = ((double)i/(i+1)) * oper;
+		  oper *= -1;
+	  }
+	  System.out.println("Result : " + String.format("%.12f", total));
+	  */
     
 
     /*
@@ -206,40 +160,49 @@ public class Test05_Quiz {
                   달팽이가 13cm의 나무 꼭대기에 올라가려면
                   며칠이 걸리는지 구하시오
     */
-
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-
-
+	  /*
+	  System.out.println("### Quiz 9 ####");
+	  
+	  int upCount = 0;
+	  int downCount = 0;
+	  int totalDay = 0;
+	  
+	  double climbUp = 3, climbDown = 2.5;
+	  double snailPoint = 0;
+	  double treeLength = 13;
+	  
+	  System.out.println("현재 위치 : " + snailPoint + "cm");
+	  while(true) {
+		  // One day
+		  snailPoint += climbUp;	// 낮
+		  snailPoint -= climbDown;	// 밤
+		  totalDay++;				// 하루 소요
+		  
+		  System.out.println(totalDay + "일차 " + "현재 위치 : " + snailPoint + "cm");
+		  
+		  if(snailPoint >= treeLength) break;
+	  }
+	  
+	  System.out.println("Snail spended " + totalDay + " days");
+	*/
     
     //문10)3의 배수의 누적 합이 100이 넘어가려면
     //    3부터 어디까지 더해야 하는지 구하시오
     //    출력결과) 3+6+9+12+...=
-
+	  
 	  /*
-	  int num=3;
-
-	  while(true) {
-		  
-		  if()
-		  
-		  
+	  System.out.println("### Quiz 10 ####");
+	  int total = 0;
+	  int num = 3, index = 1;
+	  
+	  while (true) {
+		  if (total / 10 >= 10) {
+			  System.out.println((num * index)+"까지"); 
+			  break;
+		  }
+		  total += (num * index++);
 	  }
-	  
 	  */
-	  
-	  
-	  
-	  
-
 
     //문11)누적의 합
     /*    
@@ -249,21 +212,22 @@ public class Test05_Quiz {
   
        1+....+90=
        1+....+100=5050   
-    */   
-
-/*
-	  int sum=0;
-	  for(int i=10; i<=100;i+=10) {
-		  sum=0;
-		  for(int j=1;j<=i;j++) {
-			  sum+=j;		  
+    */
+	  /*
+	  System.out.println("### Quiz 11-1 ####");
+	  
+	  int total = 0;
+	  
+	  for (int i = 10; i <= 100; i+=10) {
+		  for (int j = 1; j <= i; j++) {
+			  System.out.print(j + "+");
+			  total += j;
 		  }
-		  System.out.println("1+...."+i +"="+sum);
+		  System.out.println(" = "+total);
+		  total = 0;
 	  }
-	  
-	*/  
-	  
-	  
+	  */
+
 
     /*    
        1+....+10=55
@@ -273,59 +237,52 @@ public class Test05_Quiz {
        81+....+90=
        91+....+100=    
     */
-
+	  
 	  /*
-	  int m=1;
-	  int sum=0;
-	  for(int i=0;i<=100;i++) {
-		 if(i%10==0) {
-			 
-		m=i;
-		 for(int j=m+1;j<=m+10;j++) {
-			 sum+=j;
-			 
-		 } 		
-		 
-	
-		 System.out.println(m+1+"+...."+(m+10)+"="+sum);
-		 
-		 }
-		   
+	  System.out.println("### Quiz 11-2 ####");
+	  
+	  int total = 0;
+	  
+	  for (int i = 1; i <= 100; i++) {
+		  total += i;
+		  System.out.print(i + "+");
+		  if (i %10 == 0) {
+			  System.out.println("=" + total);
+			  total = 0;
+		  }
 	  }
-	
 	  */
 	  
-	  
+
+
     /*
             문12)
-                         @★★★
+                         @★★★ 
                          ★@★★
                          ★★@★
                          ★★★@
     */
-
+	  
 	  /*
-	  for(int i=0; i<4;i++) {
-		  
-		  for(int j=0; j<4; j++) {
-			  
-			  if(i==j) {
+	  System.out.println("### Quiz 12 ####");
+	  int pointRow = 1;
+	  
+	  int row = 4, col = 4;
+	  
+	  for (int i = 1; i <= row; i++) {
+		  for (int j = 1; j <= col; j++) {
+			  if(j == pointRow) {
 				  System.out.print("@");
 			  }
-			  
-			  if(j==3) {
-				  System.out.print(" ");
-			  }
 			  else {
-				  System.out.print("★");	  
+				  System.out.print("★");  
 			  }
-			  
 		  }
+		  pointRow++;
 		  System.out.println();
 	  }
-	  
-	  
 	  */
+	  
 
 
     /*
@@ -338,23 +295,33 @@ public class Test05_Quiz {
        1   5   5    42
        2   4   5    41
        2   5   5    44
-    */    
-    
-	/*
-	  int g2=5;
-	  int g3=5;
-	  int g5=5;
-	 */
+    */
 	  
 	  
+	  /*
+	  System.out.println("\n### Quiz 13 ####");
 	  
+	  int weightTwo = 2;
+	  int weightThree = 3;
+	  int weightFive = 5;
+	  int total = 0;
 	  
+	  System.out.println("2g  3g  5g   total");
+	  for (int i = 1; i <= 5; i++) {
+		  for (int j = 1; j <= 5; j++) 
+			  for (int k = 1; k <= 5; k++) {
+				  total = i * weightTwo + j * weightThree + k * weightFive;
+				  if (total >= 40 && total <= 45) {
+					  System.out.println("" + i + "   " + j + "   " + k + "    " + total);
+					  total = 0;
+					  
+				  }// for end
+				  
+			  }// for end
+		  
+	  }//for end
+	  */
 	  
-	  
-	  
-    
-    
-    
 
   }//main() end
 }//class end
