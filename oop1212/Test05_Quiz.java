@@ -347,7 +347,22 @@ public class Test05_Quiz {
 	 */
 	  
 	  
-	  
+	  int total=0;
+	  for(int a=1; a<5; a++) {
+		  
+		  for(int b=1; b<=5; b++) {
+			  
+			  for(int c=1; c<5; c++) {
+				  
+				  total=(a*2)+(b*3)+(c*5); // 추의 합계 
+				  if(total >=40 && total <=45) {
+					  System.out.println(a+ " "+ b+ " "+ c +"=" +total);
+				  }
+			  }
+			  
+		  }
+		  
+	  }
 	  
 	  
 	  
