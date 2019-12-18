@@ -70,35 +70,7 @@ public class Test06_OX {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		
-		/*
-		// 한사람만 대상으로 성적 구하기 
-		Jumsu student =new Jumsu(1, "하이옥돌",1,2,1,1,1);
-		student.compute();
-		student.disp();
-		*/
-		
-		//5명의 성적을 완성하시오 
-		//등수는 아직 입력받지 말구
-		
-		/*
-		Jumsu student1 =new Jumsu(1, "하이옥돌",1,2,1,1,1);
-		student1.compute();
-		student1.disp();
-		Jumsu student2 =new Jumsu(1, "하이옥돌",1,2,1,1,1);
-		student2.compute();
-		student2.disp();
-		Jumsu student3 =new Jumsu(1, "하이옥돌",1,2,1,1,1);
-		student3.compute();
-		student3.disp();
-		Jumsu student4 =new Jumsu(1, "하이옥돌",1,2,1,1,1);
-		student4.compute();
-		student4.disp();
-		Jumsu student5 =new Jumsu(1, "하이옥돌",1,2,1,1,1);
-		student5.compute();
-		student5.disp();
-		*/
 		Jumsu[] student= {
 				new Jumsu(1,"김옥돌",1,2,1,1,1),
 				new Jumsu(2,"나오돌",1,1,1,1,1),

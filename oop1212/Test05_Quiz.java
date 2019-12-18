@@ -304,7 +304,7 @@ public class Test05_Quiz {
 	  int g5=5;
 	 */
 	  
-	  
+	  /*
 	  int total=0;
 	  for(int a=1; a<5; a++) {
 		  
@@ -318,13 +318,8 @@ public class Test05_Quiz {
 				  }
 			  }
 			  
-		  }
-		  
 	  }
-	  
-=======
-    */
->>>>>>> 9be20dbbbf62607cf3c48f9dc8d7f6f490b765d4
+	  */
 	  
 	  
 	  /*
