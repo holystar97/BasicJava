@@ -20,6 +20,7 @@ public class Test07_Quiz {
 		
 		// 위치를 알아고  substring을 잘 쓰면 됩니다 
 		
+		/*
 		int n=email.indexOf('@');
 		System.out.println(n);
 		
@@ -33,6 +34,21 @@ public class Test07_Quiz {
 		
 		String l=email.substring(n+1,email.length());
 		System.out.println(l);
+		*/
+		
+		int pos=email.indexOf("@");
+		if(pos==-1) {
+			System.out.println("이메일 주소 틀림 ! ");
+		}else {
+			System.out.println("이메일 주소 맞음 ! ");
+			
+			String id=email.substring(0,pos);
+			String server=email.substring(pos+1,20);
+		}
+		
+		
+		
+		
 		
 		
 		
@@ -48,9 +64,13 @@ public class Test07_Quiz {
 		 * 
 		 * 
 		 * */
+	
+		
+		/*
 		
 		String jumin="1512304123456";
 		
+	
 		String birth=jumin.substring(0, 6);
 		System.out.println(birth);
 		
@@ -82,11 +102,56 @@ public class Test07_Quiz {
 		
 		System.out.print("나이: " + age);
 		
+		for(int i=0; i<jumin.length();i++) {
+			
+			
+		}
+		*/
+		
+		String jumin="1512304123456";
+		
+		int code=Integer.parseInt(jumin.substring(6,7));
+		
+		
+		int myYear=Integer.parseInt(jumin.substring(0,2))+2000;
+		int myMonth=Integer.parseInt(jumin.substring(2,4));
+		int myDate= Integer.parseInt(jumin.substring(4,6));
+		
+		
+		String gender="";
+		switch(code%2) {
+			case 0: gender= "여자"; break;
+			case 1: gender= "남자"; break;
+		}
+		
+		int myAge= 2019-myYear;
+	
+		System.out.println("생년월일");
+		System.out.println(myYear+"년");
+		System.out.println(myMonth+"월");
+		System.out.println(myDate+"일");
+
+		System.out.println();
+		System.out.println("성별  "+ gender);
+		System.out.println("나이"+ myAge);
+		
+		/*
+		int hap=0;
+		for(int i=0; i<jumin.length();i++) {
+			hap+=Character.getNumericValue(jumin.charAt(i));
+		}
+		System.out.println(hap);
+		*/
+		
+		
+		int hap=0;
+		for(int i=0; i<jumin.length();i++) {
+			hap+=Integer.parseInt(jumin.substring(i,i+1));
+		}
+		System.out.println(hap);
+		
 		
 	
-		
-		
-		
 		// 짝수면 여자, 홀수면남자 
 		// string으로 substring 한다음 에 parseint로 정수로 바꾸기 
 		
