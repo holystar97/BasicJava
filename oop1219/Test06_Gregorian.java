@@ -21,6 +21,10 @@ public class Test06_Gregorian {
 		System.out.println(now.get(Calendar.HOUR_OF_DAY));
 		System.out.println(now.get(Calendar.DAY_OF_WEEK));
 		
+		//2020년이 윤년인지 확인하시오 
+		System.out.println(now.isLeapYear(2020));
+		
+		
 		
 	}
 }
