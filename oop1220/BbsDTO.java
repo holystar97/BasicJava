@@ -2,9 +2,55 @@ package oop1220;
 
 public class BbsDTO {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	private String uid; // 글쓴 아이디
+	private String passwd; // 글 비번 
+	private String subject; // 글 제목
+	private String content; // 글 내용 
+	private int readcnt; // 조회수 
+	
+	public BbsDTO () {
+		//getter와 setter함수 자동코딩
+		//source-> generate getters and setters ..
+		
 	}
 
+	public String getUid() {
+		return uid;
+	}
+
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
+
+	public String getPasswd() {
+		return passwd;
+	}
+
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public int getReadcnt() {
+		return readcnt;
+	}
+
+	public void setReadcnt(int readcnt) {
+		this.readcnt = readcnt;
+	}
 }
