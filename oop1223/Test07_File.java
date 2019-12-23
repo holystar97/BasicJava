@@ -48,6 +48,8 @@ public class Test07_File {
 				//file.delete();
 				
 				
+				
+				
 			}else {
 				System.out.println("파일 없어요 ! ");
 			}
