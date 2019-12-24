@@ -10,44 +10,45 @@ public class Test08_input {
     
     try {
       
-    	String fileName="D:/java1209/workspace/basicJava/src/oop1210/Welcome.java";
-    	
-    	fr=new FileReader(fileName);
-    	
-    	br=new BufferedReader(fr);
-    	
-    	int num=0; // 행번호 
-    	
-    	while(true) {
-    		// 엔터(\n)를 기준으로 가져온다
-    		String line= br.readLine();
-    		if(line==null) {
-    			break;
-    		}
-    		
-    		//System.out.println(line);
-    		System.out.printf("%3d %s\n", ++num,line);
-    		
-    		//20행마다 밑줄 긋기 
-    		if(num%20==0) {
-    			System.out.println("----------------------------------");
-    		}
-    		
-    		
-    	}
-    	
-    	
-    	
+      String fileName="D:/java1209/workspace/basicJava/src/oop1210/Welcome.java";
+      
+      //1)파일 가져오기
+      fr=new FileReader(fileName);
+      
+      //2)파일 내용 읽기
+      br=new BufferedReader(fr); 
+      
+      int num=0; //행번호
+      while(true) {
+        //엔터(\n)를 기준으로 가져오기
+        String line=br.readLine();
+        if(line==null) {
+          break;//반복문 탈출
+        }
+        
+        //System.out.println(line);
+        System.out.printf("%3d %s\n", ++num, line);
+        
+        //20행마다 밑줄긋기
+        if(num%20==0) {
+          System.out.println("---------------------");
+        }
+        
+      }//while end
+      
+      
+      
+      
     }catch (Exception e) {
         System.out.println("파일읽기실패:"+e);
-    }finally {
+    }finally {//자원 반납시 순서 주의
       try {
-          if(fr!=null) {fr.close();}
+        if(br!=null) {br.close();}
       }catch (Exception e) {}
       
       try {
-          if(br!=null) {br.close();}
-      }catch (Exception e) {}   
+          if(fr!=null) {fr.close();}
+      }catch (Exception e) {} 
     }//try end
     
     
